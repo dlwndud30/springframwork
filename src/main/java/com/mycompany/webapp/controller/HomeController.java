@@ -19,7 +19,7 @@ public class HomeController {
 	@RequestMapping("/")
 	public String home(Locale locale, Model model) {
 		logger.info("실행");
-		return "/WEB-INF/views/home.jsp";
+		return "home";
 	}
 
 	
