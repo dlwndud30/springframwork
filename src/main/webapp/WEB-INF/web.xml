@@ -30,9 +30,25 @@
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 		
+	<!-- 클라이런트가 http://localhost:8080/webapp/... 이렇게 요청했을 때 DispatcherServlet 처리 -->
 	<servlet-mapping>
 		<servlet-name>appServlet</servlet-name>
-		<!-- http://localhost:8080/webapp/... 이런 URL로 요청할 경우 모두 처리 -->
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
+	
+	<!-- 클라이언트가 Post 방식으로 한글을 보냈을 때 한글을 복원시키는 Filter 추가 -->
+	<filter>
+		<filter-name>encodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+	</filter>
+
+	<!-- 클라이런트가 http://localhost:8080/webapp/* 이렇게 요청했을 때 CharacterEncodingFilter 처리 -->
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
 </web-app>
