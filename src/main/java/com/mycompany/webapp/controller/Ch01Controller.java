@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class Ch01Controller {
 	private static final Logger logger = LoggerFactory.getLogger(Ch01Controller.class);
 
-	@RequestMapping("/content")
+	@RequestMapping("/content")   //url만 맞으면 모든 방식이 다 허용됨
 	public String content(){
 		logger.info("실행");
 		//log.info("싫ㅇ");
