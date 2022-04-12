@@ -9,10 +9,20 @@
 									<li class="nav-item mb-2">
 										<h6 class="text-white">
 											<span class ="mr-2">Ch02.</span>
-											<a href="${pageContext.request.contextPath}/ch02/content" class="text-white">Controller and RequestMapping</a>
+											<a href="${pageContext.request.contextPath}/ch02/content" class="text-white">Controller and Request Mapping</a>
 										</h6>
 									</li>
-
-
+									<li class="nav-item mb-2">
+										<h6 class="text-white">
+											<span class ="mr-2">Ch03.</span>
+											<a href="${pageContext.request.contextPath}/ch03/content" class="text-white">Controller and Request Parameter</a>
+										</h6>
+									</li>
+									<li class="nav-item mb-2">
+										<h6 class="text-white">
+											<span class ="mr-2">Ch04.</span>
+											<a href="${pageContext.request.contextPath}/ch04/content" class="text-white">Controller and Validation</a>
+										</h6>
+									</li>
 	
 								</ul>
