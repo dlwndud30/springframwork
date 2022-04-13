@@ -13,7 +13,7 @@
          </div>
          <div class="card-body">
             <a class="btn btn-info btn-sm" 
-               href="method1?param1=문자열&param3=3.14&param4=true&param5=2021-08-27">요청</a>
+               href="method1?param1=문자열&param2=5&param3=3.14&param4=true&param5=2021-08-27">요청</a>
             <hr/>
             <form method="get" action="method1">
                <div class="input-group">
