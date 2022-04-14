@@ -23,13 +23,11 @@ public class Ch06Controller {
 	
 	@GetMapping("/forward")
 	public String forward() {
-		
 		return "ch06/forward";
 	}
 	
 	@GetMapping("/redirect")
-	public String redirect() {
-		
+	public String redirect() {	
 		return "redirect:/";
 	}
 	

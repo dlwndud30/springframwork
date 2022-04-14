@@ -1,4 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -18,7 +19,13 @@
 					<img src="${pageContext.request.contextPath}/resources/images/logo-spring.png" width="30" height="30" class="d-inline-block align-top"> Spring
 <%-- 					<img src="<%=request.getContextPath()%>>/resources/images/logo-spring.png" width="30" height="30" class="d-inline-block align-top"> Spring  --%>  				</a>
   				<div>
-  					<a href="#" class="btn btn-success btn-sm">로그인</a>
+  					<c:if test="${sessionMid == null}">
+  						<a href="${pageContext.request.contextPath}/ch08/login" class="btn btn-success btn-sm">로그인</a>
+  					</c:if>
+  					<c:if test="${sessionMid != null}">
+  						<b class="text-white mr-2">User ID: ${sessionMid}</b>
+  						<a href="${pageContext.request.contextPath}/ch08/logout" class="btn btn-success btn-sm">로그아웃</a>
+  					</c:if>
   				</div>
 			</nav>	
 			<div class="container-fluid flex-grow-1">
