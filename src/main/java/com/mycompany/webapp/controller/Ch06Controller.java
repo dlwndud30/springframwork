@@ -60,7 +60,7 @@ public class Ch06Controller {
 	
 	@GetMapping(value="/getJson2", produces = "application/json; charset=UTF-8")
 	@ResponseBody  //리턴되는 내용이 응답 본문에 들어간다. -> 얘가 있으면 return되는 내용이 뷰 이름으로 해석되지 X
-	public String getJson2(HttpServletResponse response) throws Exception{
+	public String getJson2() throws Exception{
 		//{"fileName":"phpto6.jpg"}
 		JSONObject jsonObject = new JSONObject();
 		jsonObject.put("fileName", "photo6.jpg");
@@ -74,7 +74,6 @@ public class Ch06Controller {
 	//AJAX는 반드시 응답을 제공해 줘야함 -> redirect 못해
 	@GetMapping("/getJson3")
 	public String getJson3() {
-		
 		return "redirect:/";
 	}
 	

@@ -103,7 +103,7 @@
 							
 							if(data.result==="success") {
 								//현재 페이지 전체를 다시 서버에서 받아오도록 함
-								window.location.reload();
+								window.location.reload();//현재 페이지를 리프레시
 							} else if(data.result==="wrongMid") {
 								midError.html("아이디가 잘못됨");
 							} else if(data.result==="wrongMpassword") {
@@ -118,7 +118,7 @@
 						}).done((data) => {
 							//data = {result:"success"}
 							//현재 페이지 전체를 다시 서버에서 받아오도록 함
-							window.location.reload();
+							window.location.reload();  //AJAX는 전체 페이지가 바뀌지 않으므로 버튼이 바뀌려면 현재 페이지를 리프레시 해줘야함 
 						});
 					}
 				</script>

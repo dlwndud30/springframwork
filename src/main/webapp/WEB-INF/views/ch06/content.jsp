@@ -17,6 +17,7 @@
 		<a href="javascript:ajax2()" class="btn btn-info btn-sm">AJAX 요청(JSON)</a>
 		<a href="javascript:ajax3()" class="btn btn-info btn-sm">AJAX 요청(JSON)</a>
 		<a href="javascript:ajax4()" class="btn btn-info btn-sm">AJAX 요청(리다이렉트) - (x)</a>
+		
 		<div id="content" class="mt-2"></div>
 		<script>
 			function ajax1() {
