@@ -28,7 +28,20 @@
 		</init-param>
 		<!-- 배치할 때 DispatcherServlet 객체를 미리 생성하도록 설정 -->
 		<load-on-startup>1</load-on-startup>
+		<!-- Servlet 3.0에서 지원하는 multipart/form-data 파싱 기능을 위한 설정 -->
+		<multipart-config>
+			<!-- 임시 파일이 저장될 폴더의 절대 경로만 가능 -->
+			<location>C:/Temp</location>
+			<!-- 파일의 사이즈가 10MB 이하만 허용 -->
+			<max-file-size>10485760</max-file-size>
+			<!-- multipart/form-data 전체 크기가 30MB 이하만 허용 -->
+			<max-request-size>31457280</max-request-size>
+			<!-- 임시 파일로 저장해야할 파일의 크기 지정 (0:모든 업로드된 파일은 기본적으로 임시파일(요청 처리가 끝나면 임시파일은 삭제된다) 형태로 C:/Temp에 저장된다) 1024: 파일의 크기가 1024이하이면 메모리에 저장되고, 1024보다 크면 임시 폴더에 파일 형태로 저장한다-->
+			<file-size-threshold>0</file-size-threshold>
+		</multipart-config>
 	</servlet>
+	
+	
 		
 	<!-- 클라이런트가 http://localhost:8080/webapp/... 이렇게 요청했을 때 DispatcherServlet 처리 -->
 	<servlet-mapping>

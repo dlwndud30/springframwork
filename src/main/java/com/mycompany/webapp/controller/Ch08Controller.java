@@ -62,7 +62,7 @@ public class Ch08Controller {
 	
 	@PostMapping("/login")
 	public String login(String mid, String mpassword, HttpSession session) {
-		
+		log.info("dd");
 		//로그인 성공 시 세션에 회원 아이디를 저장
 		if(mid.equals("spring") && mpassword.equals("12345")) {
 			session.setAttribute("sessionMid", mid);
