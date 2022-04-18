@@ -30,7 +30,7 @@
 			<button class="btn btn-info btn-sm">제출</button>
 		</form:form>
 		
-		<form:form modelAttribute="member" method="post" action="form3" class="mt-3">
+		<form:form modelAttribute="member" method="post" action="form4" class="mt-3">
 			<div>
 				<form:radiobuttons items="${cityList}" path="mcity" 
 								 itemValue="code" itemLabel="label"
