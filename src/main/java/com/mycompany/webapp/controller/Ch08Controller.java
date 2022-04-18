@@ -131,6 +131,7 @@ public class Ch08Controller {
 	}
 	
 	//새로운 세션 저장소에 객체를 저장하는 역할, 단 1번만 실행된다. -> @SessionAttributes({"inputForm"})있으면
+	//세션에 없을 경우 새로 객체 생성, 세션에 있을 경우 메소드를 실행하지 X(기존의 객체 사용)
 	@ModelAttribute("inputForm")
 	public Ch08InputForm getCh08InputForm() {
 		Ch08InputForm inputForm = new Ch08InputForm();
@@ -157,7 +158,7 @@ public class Ch08Controller {
 		log.info("data3: "+inputForm.getData3());
 		log.info("data4: "+inputForm.getData4());
 		
-		status.setComplete();
+		status.setComplete(); //세션 객체 제거
 		
 		return "redirect:/ch08/content";
 	}
