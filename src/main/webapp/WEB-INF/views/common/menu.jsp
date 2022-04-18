@@ -51,7 +51,19 @@
 									<li class="nav-item mb-2">
 										<h6 class="text-white">
 											<span class ="mr-2">Ch09.</span>
-											<a href="${pageContext.request.contextPath}/ch09/content" class="text-white">Controller / File upload and dw</a>
+											<a href="${pageContext.request.contextPath}/ch09/content" class="text-white">Controller / File upload and download</a>
+										</h6>
+									</li>
+									<li class="nav-item mb-2">
+										<h6 class="text-white">
+											<span class ="mr-2">Ch10.</span>
+											<a href="${pageContext.request.contextPath}/ch10/content" class="text-white">Controller / Execution Handling</a>
+										</h6>
+									</li>
+									<li class="nav-item mb-2">
+										<h6 class="text-white">
+											<span class ="mr-2">Ch11.</span>
+											<a href="${pageContext.request.contextPath}/ch11/content" class="text-white">View / Spring Tag Library</a>
 										</h6>
 									</li>
 								</ul>
