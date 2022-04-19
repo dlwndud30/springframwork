@@ -122,7 +122,7 @@ public class Ch09Controller {
 		response.setContentType(contentType);   //= response.setHeader("Content-Type", contentType);
 		
 		
-		//다운로드할 파일명을 헤더에 추가
+		//다운로드할 파일명을 헤더에 추가 : 브라우저별로 한글을 처리하는 방식이 다름
 		if(userAgent.contains("Trident") || userAgent.contains("MSIE")) {
 			//IE 브라우저일 경우
 			originalFilename = URLEncoder.encode(originalFilename, "UTF-8");
@@ -131,11 +131,13 @@ public class Ch09Controller {
 			originalFilename = new String(originalFilename.getBytes("UTF-8"), "ISO-8859-1");
 		}
 		
+		//Content-Disposition : HTTP Response Body에 오는 컨텐츠의 기질/성향을 알려주는 속성
+		//attachment + filename을 써주면 Body에 오는 값을 다운로드 받으라는 뜻이다
 		response.setHeader("Content-Disposition", "attachment; filename=\""+ originalFilename + "\"");
 		
 		//파일 데이터를 응답 본문에 실기
-		File file = new File("C://Temp/uploadfiles/" + saveFilename);
-		if(file.exists()) {
+		File file = new File("C://Temp/uploadfiles/" + saveFilename);  //C://Temp/uploadfiles/" + saveFilename에 있는 파일들의 file 객체를 생성
+		if(file.exists()) {  //파일의 존재 여부를 리턴
 			FileCopyUtils.copy(new FileInputStream(file), response.getOutputStream());
 		}
 	}

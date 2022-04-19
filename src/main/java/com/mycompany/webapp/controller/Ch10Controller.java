@@ -37,30 +37,31 @@ public class Ch10Controller {
 		}			
 		return "redirect:/ch10/content";
 	}
-	
+
 	@RequestMapping("/handlingException3")
-	   public String handlingException3() {
-	      log.info("실행");
-	      Object data = "abc";
-	      Date date = (Date) data; //ClassCastException 발생 : 객체를 잘못 변환할 경우
-	      return "redirect:/ch10/content";
-	   }
-	
-	   @RequestMapping("/handlingException4")
-	   public String handlingException4() {
-	      log.info("실행");
-	      int stock = 0;
-	      if(stock == 0) {
-	         throw new Ch10SoldOutException("상품 재고가 없음");
-	      }
-	      return "redirect:/ch10/content";
-	   }
-	   
-	   @RequestMapping("/handlingException5")
-	   public String handlingException5() {
-	      log.info("실행");
-	      int[] arr = {10, 20, 30};
-	      arr[3] = 40; //ArrayIndexOutOfBoundsException
-	      return "redirect:/ch10/content";
-	   }
+	public String handlingException3() {
+		log.info("실행");
+		Object data = "abc";
+		Date date = (Date) data; //ClassCastException 발생 : 객체를 잘못 변환할 경우
+		return "redirect:/ch10/content";
+	}
+
+	@RequestMapping("/handlingException4")
+	public String handlingException4() {
+		log.info("실행");
+		int stock = 0;
+		if(stock == 0) {
+			throw new Ch10SoldOutException("상품 재고가 없음");
+		}
+		return "redirect:/ch10/content";
+	}
+
+	@RequestMapping("/handlingException5")
+	public String handlingException5() {
+		log.info("실행");
+		int[] arr = {10, 20, 30};
+		arr[3] = 40; //ArrayIndexOutOfBoundsException
+		return "redirect:/ch10/content";
+	}
+
 }
