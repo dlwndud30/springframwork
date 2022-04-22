@@ -78,4 +78,28 @@
 											<a href="${pageContext.request.contextPath}/ch13/content" class="text-white">View / Management Object Create/DI</a>
 										</h6>
 									</li>
+									<li class="nav-item mb-2">
+										<h6 class="text-white">
+											<span class ="mr-2">Ch14.</span>
+											<a href="${pageContext.request.contextPath}/ch14/content" class="text-white">DAO(data access object)</a>
+										</h6>
+									</li>	
+									<li class="nav-item mb-2">
+										<h6 class="text-white">
+											<span class ="mr-2">Ch15.</span>
+											<a href="${pageContext.request.contextPath}/ch15/content" class="text-white">AOP(Aspect Oriented Programming)</a>
+										</h6>
+									</li>									
+									<li class="nav-item mb-2">
+										<h6 class="text-white">
+											<span class ="mr-2">Ch16.</span>
+											<a href="${pageContext.request.contextPath}/ch16/content" class="text-white">Transaction</a>
+										</h6>
+									</li>
+									<li class="nav-item mb-2">
+										<h6 class="text-white">
+											<span class ="mr-2">Ch17.</span>
+											<a href="${pageContext.request.contextPath}/ch17/content" class="text-white">Security</a>
+										</h6>
+									</li>
 								</ul>
