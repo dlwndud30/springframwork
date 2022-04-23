@@ -42,6 +42,7 @@
 						//{mid:xxx, mrole:[yyy, ...] ip:zzz}
 						var html = "";
 						html += "<p>mid: " + data.mid + "</p>";
+						html += "<p>mname: " + data.mname + "</p>";
 						html += "<p>memail: " + data.memail + "</p>";
 						html += "<p>mrole: " + data.mrole + "</p>";
 						html += "<p>ip: " + data.ip + "</p>";
